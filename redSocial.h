@@ -16,12 +16,13 @@ public:
     int numeroDeUsuarios;
     int numeroDePublicaciones;
 
+//METODOS
     void agregarUsuario(Usuario* usuario);
     void mostrarUsuarios();
     void mostrarPublicaciones();
     Usuario* getUsuario(int id); 
 
-    //CONSTRUCTORES
+//CONSTRUCTORES
     RedSocial(string nombre);
     RedSocial(string nombre, vector <Usuario*> usuarios);
     RedSocial(string nombre, vector <Usuario*> usuarios,vector <Publicacion*>publicaciones);

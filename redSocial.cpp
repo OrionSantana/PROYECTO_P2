@@ -2,16 +2,19 @@
 using namespace std;
 
 /*
+//METODOS
     void agregarUsuario();
     void mostrarUsuarios();
     void mostrarPublicaciones();
     Usuario* getUsuario(int id); 
 
-    //CONSTRUCTORES
+//CONSTRUCTORES
     RedSocial(string nombre);
     RedSocial(string nombre, vector <Usuario*> usuarios);
     RedSocial(string nombre, vector <Usuario*> usuarios,vector <Publicacion*>publicaciones);
 */
+
+//METODOS -----
 
 void agregarUsuario(Usuario* usuario){
     usuarios.push_back(usuario);
@@ -41,4 +44,22 @@ Usuario* getUsuario(int id){
     if (out==0){
     return nullptr;
     }
+}
+
+//CONSTRUCTORES -----
+
+//CHECA ESTA MADRE v v v v v ! ! ! ! !
+RedSocial::RedSocial(string nom){
+    this->nombre=nom;
+}
+
+RedSocial::RedSocial(string nom, vector <Usuario*> usu){
+    this->nombre=nom;
+    this->usuarios=usu;
+}
+
+RedSocial::RedSocial(string nom, vector <Usuario*> usu, vector <Publicacion*>pub){
+    this->nombre=nom;
+    this->usuarios=usu;
+    this->publicaciones=pub;
 }
