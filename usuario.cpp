@@ -1,4 +1,7 @@
 #include <iostream>
+#include "redSocial.h"
+#include "usuario.h"
+#include "publicacion.h"
 using namespace std;
 
 /*
