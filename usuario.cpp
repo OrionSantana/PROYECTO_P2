@@ -32,11 +32,20 @@ void mostrar(){
     cout<<nacionalidad;
     cout<<id;
 }
-//ESTA MADRE TAMBIÉN CHECALA - NO LE SE A LOS APUNTADORES .__. v v v v v 
+//Creo que ya esta pero no puedo compilar
 void mostrarAmigos(){
-    for (int i=0;i<amigos.size();i++){
-        cout<<amigos[i]<<endl;
-    }
+        cout << "Los amigos de " << nombre << " son:" << endl;
+
+        for (int i = 0; i < amigos.size(); i++)
+        {
+            Usaurio* amigo = amigos[i];
+
+            cout << "Nombre: " << amigo->nombre << endl;
+            cout << "Edad: " << amigo->edad << endl;
+            cout << "Nacionalidad: " << amigo->nacionalidad << endl;
+            cout << endl;
+
+        }
 }
 
 void mostrarPublicaciones(){
@@ -44,10 +53,10 @@ void mostrarPublicaciones(){
         cout<<publicaciones[i]<<endl;
     }
 }
-// °_°
+// Creo que ya sirve pero no puedo compilr entonces no se
 void agregarAmigo(Usuario* nuevoAmigo){
     this->amigos.push_back(nuevoAmigo);
-    nuevoAmigo.amigos.push_back(this);
+    nuevoAmigo->amigos.push_back(this);
 }
 //¯\_(ツ)_/¯
 void crearPublicacion(){
