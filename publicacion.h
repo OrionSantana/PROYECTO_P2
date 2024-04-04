@@ -12,7 +12,7 @@ private:
     int id;
 public:
     string fecha;
-    string Contenido;
+    string contenido;
     Usuario* usuario;
 
 //METODOS

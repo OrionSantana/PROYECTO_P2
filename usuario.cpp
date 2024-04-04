@@ -50,7 +50,11 @@ void mostrarAmigos(){
 
 void mostrarPublicaciones(){
     for (int i=0;i<publicaciones.size();i++){
-        cout<<publicaciones[i]<<endl;
+        Publicacion* publicacion = publicaciones[i];
+        cout << "Fecha: " << publicacion->fecha << endl;
+        cout << "Contenido: " << publicacion->contenido << endl;
+        cout << "Usuario: " << publicacion->usuario->nombre << endl;
+        cout << endl;
     }
 }
 // Creo que ya sirve pero no puedo compilr entonces no se
