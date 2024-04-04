@@ -19,7 +19,10 @@ int main(){
             mostrarPublicaciones();
         break;
         case 4:
-            agregarUsuario(Usuario* usuario);
+            Usuario newusuario;
+            cout << "Ingrese el nombre, edad y nacionalidad del nuevo usuario" << endl;
+            cin >> newusuario.nombre >> newusuario.edad >> newusuario.nacionalidad;
+            agregarUsuario(&newusuario);
         break;
         default:
         cout<<endl<<endl<<endl;
