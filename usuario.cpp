@@ -38,7 +38,7 @@ void mostrarAmigos(){
 
         for (int i = 0; i < amigos.size(); i++)
         {
-            Usaurio* amigo = amigos[i];
+            Usuario* amigo = amigos[i];
 
             cout << "Nombre: " << amigo->nombre << endl;
             cout << "Edad: " << amigo->edad << endl;

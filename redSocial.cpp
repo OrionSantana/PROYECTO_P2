@@ -9,7 +9,7 @@ using namespace std;
     void agregarUsuario();
     void mostrarUsuarios();
     void mostrarPublicaciones();
-    Usuario* getUsuario(int id); 
+    Usuario* getUsuario(int id);
 
 //CONSTRUCTORES
     RedSocial(string nombre);

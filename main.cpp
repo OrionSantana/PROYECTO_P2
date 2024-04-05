@@ -7,16 +7,17 @@
 using namespace std;
 
 int main(){
+    RedSocial pruebaRed("SHOPIBUY");
     again:
     int option = 0;
     cout<<"0. Salir"<<endl<<"1. Lista de usuarios"<<endl<<"2. Lista de pubicaciones"<<endl<<"3. Explorar usuario"<<endl<<"4. Agregar usuario";
     cin>>option;
     switch(option){
         case 1:
-            mostrarUsuarios();
+            pruebaRed.mostrarUsuarios();
         break;
         case 2:
-            mostrarPublicaciones();
+            pruebaRed.mostrarPublicaciones();
         break;
         case 4:
             string name, nationality;
@@ -24,11 +25,12 @@ int main(){
             cout << "Ingrese el nombre, edad y nacionalidad del nuevo usuario" << endl;
             cin >> name >> age >> nationality;
             Usuario newusuario(name,age,nationality);
-            agregarUsuario(&newusuario);
+            pruebaRed.agregarUsuario(&newusuario);
         break;
         default:
         cout<<endl<<endl<<endl;
         goto again;
+        break;
     }
 
     return 0;

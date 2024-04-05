@@ -14,12 +14,12 @@ using namespace std;
 
 void mostrarPublicacion(){
     cout<<fecha<<endl;
-    cout<<Contenido<<endl;
-    cout<<this->usuario.nombre;
+    cout<<contenido<<endl;
+    cout<<usuario.nombre;
 }
 
 Publicacion(Usuario* usuario, string fecha, string contenido){
     this->usuario=usuario;
-    this->fechas=fecha;
+    this->fecha=fecha;
     this->contenido=contenido
 }
