@@ -20,13 +20,17 @@ int main(){
         case 2:
             pruebaRed.mostrarPublicaciones();
         break;
+        case 3:
+        break;
         case 4:
+        {
             string name, nationality;
             int age;
             cout << "Ingrese el nombre, edad y nacionalidad del nuevo usuario" << endl;
             cin >> name >> age >> nationality;
             Usuario newusuario(name,age,nationality);
             pruebaRed.agregarUsuario(&newusuario);
+        }
         break;
         default:
         cout<<endl<<endl<<endl;
