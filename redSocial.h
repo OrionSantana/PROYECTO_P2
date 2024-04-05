@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "usuario.h"
+#include "publicacion.h"
 
 using namespace std;
 
@@ -20,7 +22,7 @@ public:
     void agregarUsuario(Usuario* usuario);
     void mostrarUsuarios();
     void mostrarPublicaciones();
-    Usuario* getUsuario(int id); 
+    Usuario* getUsuario(int id);
 
 //CONSTRUCTORES
     RedSocial(string nombre);

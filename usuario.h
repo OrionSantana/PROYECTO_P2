@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "redSocial.h"
+#include "publicacion.h"
 
 using namespace std;
 

@@ -19,9 +19,11 @@ int main(){
             mostrarPublicaciones();
         break;
         case 4:
-            Usuario newusuario;
+            string name, nationality;
+            int age;
             cout << "Ingrese el nombre, edad y nacionalidad del nuevo usuario" << endl;
-            cin >> newusuario.nombre >> newusuario.edad >> newusuario.nacionalidad;
+            cin >> name >> age >> nationality;
+            Usuario newusuario(name,age,nationality);
             agregarUsuario(&newusuario);
         break;
         default:
