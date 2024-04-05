@@ -8,8 +8,9 @@ using namespace std;
 
 int main(){
     RedSocial pruebaRed("SHOPIBUY");
+    int option;
     again:
-    int option = 0;
+    option = 0;
     cout<<"0. Salir"<<endl<<"1. Lista de usuarios"<<endl<<"2. Lista de pubicaciones"<<endl<<"3. Explorar usuario"<<endl<<"4. Agregar usuario";
     cin>>option;
     switch(option){
