@@ -23,7 +23,7 @@ void agregarUsuario(Usuario* usuario){
     usuarios.push_back(usuario);
 }
 
-void mostrarUsuario(){
+void mostrarUsuarios(){
     for (int i=0;i<usuarios.size();i++){
         usuarios[i]->mostrar();
         cout << endl;
