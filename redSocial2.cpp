@@ -39,13 +39,14 @@ void mostrarPublicaciones(){
 Usuario* getUsuario(int id){
     bool out=0;
     for (int i=0;i<usuarios.size();i++){
-        if (id==usuarios[i].getId){
+        if (id==usuarios[i].getId()){
             return usuarios[i];
             out=1;
-            i=usuarios.size();
+            break;
+            // i=usuarios.size();   Creo que esta parte no es necesaria
         }
     }
-    if (out==0){
+    if (!out){
     return nullptr;
     }
 }
