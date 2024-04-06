@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "redSocial.h"
-#include "usuario.h"
-#include "publicacion.h"
+#include "redSocial2.h"
+#include "usuario2.h"
+#include "publicacion2.h"
 using namespace std;
 
 int main(){

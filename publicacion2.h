@@ -1,11 +1,11 @@
-#ifndef publicacion_h
-#define publicacion_h
+#ifndef publicacion2_h
+#define publicacion2_h
 
 #include <iostream>
 #include <vector>
 #include <string>
-#include "usuario.h"
-#include "publicacion.h"
+#include "usuario2.h"
+#include "publicacion2.h"
 
 using namespace std;
 

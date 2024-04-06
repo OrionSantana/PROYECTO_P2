@@ -1,11 +1,11 @@
-#ifndef usuario_h
-#define usuario_h
+#ifndef usuario2_h
+#define usuario2_h
 
 #include <iostream>
 #include <vector>
 #include <string>
-#include "redSocial.h"
-#include "publicacion.h"
+#include "redSocial2.h"
+#include "publicacion2.h"
 
 using namespace std;
 
