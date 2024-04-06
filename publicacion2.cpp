@@ -21,5 +21,5 @@ void mostrarPublicacion(){
 Publicacion(Usuario* usuario, string fecha, string contenido){
     this->usuario=usuario;
     this->fecha=fecha;
-    this->contenido=contenido
+    this->contenido=contenido;
 }
