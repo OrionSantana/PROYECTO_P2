@@ -21,6 +21,30 @@ int main(){
             pruebaRed.mostrarPublicaciones();
         break;
         case 3:
+            int idUsuario;
+            cout << "Ingrese el ID del usuario que desea encontrar" << endl;
+            cin >> idUsuario;
+
+            Usuario* usuarioExplorado = pruebaRed.getUsuario(idUsuario);
+            if (usuarioExplorado != nullptr)
+            {
+                cout << "Infromacion del usuario:" << endl;
+                cout << "Nombre: " << usuarioExplorado->nombre << endl;
+                cout << "Edad: " << usuarioExplorado->edad << endl;
+                cout << "Nacionalidad: " << usuarioExplorado->nacionalidad << endl;
+                cout << endl;
+
+                cout << "Amigos de usuario" << endl;
+                usuarioExplorado->mostrarAmigos();
+                cout << endl;
+
+                cout << "Publicaciones del usuario:" << endl;
+                usuarioExplorado->mostrarPublicaciones();
+                cout << endl;
+                
+            } else {
+                cout << "No se encontraron coincidencias con el ID que ingreso" << endl;
+            }
         break;
         case 4:
         {
