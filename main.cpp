@@ -11,7 +11,7 @@ int main(){
     int option;
     again:
     option = 0;
-    cout<<"0. Salir"<<endl<<"1. Lista de usuarios"<<endl<<"2. Lista de pubicaciones"<<endl<<"3. Explorar usuario"<<endl<<"4. Agregar usuario";
+    cout<<"0. SALIR"<<endl<<"1. LISTA DE USUARIOS"<<endl<<"2. LISTA DE PUBLICACIONES"<<endl<<"3. EXPLORAR USUARIO"<<endl<<"4. AGREGAR USUARIO"<<endl<<endl<<"-->";
     cin>>option;
     switch(option){
         case 1:
@@ -21,30 +21,32 @@ int main(){
             pruebaRed.mostrarPublicaciones();
         break;
         case 3:
+        {
             int idUsuario;
-            cout << "Ingrese el ID del usuario que desea encontrar" << endl;
+            cout << ".INGRESE EL ID DEL USUARIO QUE DESEA ENCONTRAR" << endl<<endl<<"-->";
             cin >> idUsuario;
 
             Usuario* usuarioExplorado = pruebaRed.getUsuario(idUsuario);
             if (usuarioExplorado != nullptr)
             {
-                cout << "Infromacion del usuario:" << endl;
+                cout << ".INFORMACION DEL USUARIO:" << endl;
                 cout << "Nombre: " << usuarioExplorado->nombre << endl;
                 cout << "Edad: " << usuarioExplorado->edad << endl;
                 cout << "Nacionalidad: " << usuarioExplorado->nacionalidad << endl;
                 cout << endl;
 
-                cout << "Amigos de usuario" << endl;
+                cout << ".AMIGOS DEL USUARIO" << endl;
                 usuarioExplorado->mostrarAmigos();
                 cout << endl;
 
-                cout << "Publicaciones del usuario:" << endl;
+                cout << ".PUBLICACIONES DEL USUARIO" << endl;
                 usuarioExplorado->mostrarPublicaciones();
                 cout << endl;
-                
+
             } else {
-                cout << "No se encontraron coincidencias con el ID que ingreso" << endl;
+                cout << ".NO SE ENCONTRARON COINCIDENCIAS CON EL ID QUE INGRESO" << endl;
             }
+        }
         break;
         case 4:
         {

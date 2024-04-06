@@ -1,4 +1,6 @@
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 #include "redSocial2.h"
 #include "usuario2.h"
 #include "publicacion2.h"
@@ -27,30 +29,36 @@ int getId(){
 }
 
 void mostrar(){
-    cout<<nombre;
-    cout<<edad;
-    cout<<nacionalidad;
-    cout<<id;
+    cout<<"Nombre: "<<nombre<<endl;
+    cout<<"Edad: "<<edad<<endl;
+    cout<<"Nacionalidad"<<nacionalidad<<endl;
+    cout<<"Id: "<<id<<endl;
 }
 //Creo que ya esta pero no puedo compilar
 void mostrarAmigos(){
-        cout << "Los amigos de " << nombre << " son:" << endl;
-
+        cout << ".LOS AMIGOS DE " << nombre << " SON" << endl<< endl;
         for (int i = 0; i < amigos.size(); i++)
         {
+            cout<<i+1<<"."<<endl;
             Usuario* amigo = amigos[i];
 
             cout << "Nombre: " << amigo->nombre << endl;
             cout << "Edad: " << amigo->edad << endl;
             cout << "Nacionalidad: " << amigo->nacionalidad << endl;
+            cout<< "Id: "<< amigo->getId() <<endl;
             cout << endl;
+            //Tal vez arriesgarnos y usar la funcion mostrar() de amigo??????
 
         }
 }
 
 void mostrarPublicaciones(){
+    cout << ".LAS PUBLCIACIONES DE " << nombre << " SON" << endl<<endl;
+
     for (int i=0;i<publicaciones.size();i++){
+        cout<<i+1<<"."<<endl;
         Publicacion* publicacion = publicaciones[i];
+
         cout << "Fecha: " << publicacion->fecha << endl;
         cout << "Contenido: " << publicacion->contenido << endl;
         cout << "Usuario: " << publicacion->usuario->nombre << endl;
@@ -64,8 +72,14 @@ void agregarAmigo(Usuario* nuevoAmigo){
 }
 //¯\_(ツ)_/¯
 void crearPublicacion(){
-    Publicacion nueva;
-    publicaicones.push_back(nueva*);
+    string fecha,contenido;
+    cout<<endl<<".INTRODUSCA LA FECHA DEL DIA DE HOY"<<endl<<endl<<"-->";
+    cin>>fecha;
+    cout<<endl<<".INTRODUSCA EL CONTENIDO DE LA PUBLICACION"<<endl<<endl<<"-->";
+    cin>>contenido;
+    cout<<endl;
+    Publicacion nueva(this,fecha,contenido);
+    publicaciones.push_back(&nueva);
 }
 
 Usuario* getAmigo(int id){
@@ -86,15 +100,24 @@ Usuario* getAmigo(int id){
 
 Usuario (string nom){
     this->nombre=nom;
+
+    srand(time(NULL));
+    this->id = this->li_u + rand() % (this->ls_u + 1 -this->li_u); //Randomizacion de la id
 }
 
 Usuario (string nom,int ed){
     this->nombre=nom;
     this->edad=ed;
+
+    srand(time(NULL));
+    this->id = this->li_u + rand() % (this->ls_u + 1 -this->li_u); //Randomizacion de la id
 }
 
 Usuario (string nom,int ed,string nac){
     this->nombre=nom;
     this->edad=ed;
     this->nacionalidad=nac;
+
+    srand(time(NULL));
+    this->id = this->li_u + rand() % (this->ls_u + 1 -this->li_u); //Randomizacion de la id
 }

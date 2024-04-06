@@ -24,15 +24,20 @@ void agregarUsuario(Usuario* usuario){
 }
 
 void mostrarUsuarios(){
+    cout<<".USUARIOS EXISTENTES"<<endl<<endl;
     for (int i=0;i<usuarios.size();i++){
+        cout<<i+1<<"."<<endl;
         usuarios[i]->mostrar();
         cout << endl;
     }
 }
 
 void mostrarPublicaciones(){
+    cout<<".PUBLICACIONES EXISTENTES"<<endl<<endl;
     for (int i=0;i<publicaciones.size();i++){
-        publicaciones[i]->mostrarPublicaciones();
+        cout<<i+1<<"."<<endl;
+        publicaciones[i]->mostrarPublicacion();
+        cout<<endl;
     }
 }
 
@@ -47,7 +52,7 @@ Usuario* getUsuario(int id){
         }
     }
     if (!out){
-    return nullptr;
+        return nullptr;
     }
 }
 
