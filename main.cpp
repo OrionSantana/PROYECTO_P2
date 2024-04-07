@@ -4,7 +4,9 @@
 #include "redSocial2.h"
 #include "usuario2.h"
 #include "publicacion2.h"
+#include "rlutil.h"
 using namespace std;
+using namespace rlutil;
 
 int main(){
     RedSocial pruebaRed("SHOPIBUY");
