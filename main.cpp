@@ -22,27 +22,52 @@ int main(){
         break;
         case 3:
         {
-            int idUsuario;
+            int idUsuario,uMenuOp=1,id_before;
+            Usuario* usuarioExplorado;
+            Usuario* usuarioExploradoNewAmigo;
+
+            exploreAmigo:
             cout << ".INGRESE EL ID DEL USUARIO QUE DESEA ENCONTRAR" << endl<<endl<<"-->";
             cin >> idUsuario;
 
-            Usuario* usuarioExplorado = pruebaRed.getUsuario(idUsuario);
+            usuarioExplorado = pruebaRed.getUsuario(idUsuario);
             if (usuarioExplorado != nullptr)
             {
+                while(uMenuOp!=0){
                 cout << ".INFORMACION DEL USUARIO:" << endl;
                 cout << "Nombre: " << usuarioExplorado->nombre << endl;
                 cout << "Edad: " << usuarioExplorado->edad << endl;
                 cout << "Nacionalidad: " << usuarioExplorado->nacionalidad << endl;
-                cout << endl;
+                cout << endl<<endl;
 
-                cout << ".AMIGOS DEL USUARIO" << endl;
-                usuarioExplorado->mostrarAmigos();
-                cout << endl;
+                cout<<"0. SALIR"<<endl<<"1. VER LISTA DE AMIGOS"<<endl<<"2. VER PUBLICACIONES"<<endl<<"3. CREAR PUBLICACION"<<endl<<"4. ENTRAR A PERFIL DE AMIGO"<<endl<<"5. AGREGAR UN NUEVO AMIGO"<<endl<<endl<<"-->";
+                cin>>uMenuOp;
+                if(uMenuOp == 1){
 
-                cout << ".PUBLICACIONES DEL USUARIO" << endl;
-                usuarioExplorado->mostrarPublicaciones();
-                cout << endl;
+                    cout << ".AMIGOS DEL USUARIO" << endl;
+                    usuarioExplorado->mostrarAmigos();
+                    cout << endl;
+                }
+                if (uMenuOp == 2){
 
+                    cout << ".PUBLICACIONES DEL USUARIO" << endl;
+                    usuarioExplorado->mostrarPublicaciones();
+                    cout << endl;
+                }
+                if (uMenuOp == 3){
+                    usuarioExplorado->crearPublicacion();
+                }
+                if (uMenuOp == 4){
+                    goto exploreAmigo;
+                }
+                if (uMenuOp == 5){
+                    pruebaRed.mostrarUsuarios();
+                    cin>>idUsuario;
+                    usuarioExploradoNewAmigo = pruebaRed.getUsuario(idUsuario);
+                    usuarioExplorado->agregarAmigos(usuarioExploradoNewAmigo);
+                }
+
+                }
             } else {
                 cout << ".NO SE ENCONTRARON COINCIDENCIAS CON EL ID QUE INGRESO" << endl;
             }
