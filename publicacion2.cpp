@@ -26,5 +26,5 @@ Publicacion(Usuario* usuario, string fecha, string contenido){
     this->contenido=contenido;
 
     srand(time(NULL));
-    this->id = this->li_p + rand() % (this->ls_p + 1 -this->lp_u); //Randomizacion de la id --- IGUAL CREO QUE NUNCA SE USA XD
+    this->id = this->li_p + rand() % (this->ls_p + 1 -this->li_p); //Randomizacion de la id --- IGUAL CREO QUE NUNCA SE USA XD
 }
